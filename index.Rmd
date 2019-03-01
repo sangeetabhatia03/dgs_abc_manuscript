@@ -1,0 +1,10 @@
+--- 
+title: "Using Approximate Bayesian Computation to estimate landscape resistance – a simulation approach"
+author: "Sangeeta Bhatia, Marco Sciaini, Bernd Gruber"
+date: "`r Sys.Date()`"
+documentclass: book
+bibliography: [bib/dgs_abc.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: sangeetabhatia03/dgs_abc_manuscript
+---

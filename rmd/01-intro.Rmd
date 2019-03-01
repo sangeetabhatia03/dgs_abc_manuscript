@@ -1,0 +1,81 @@
+# Introduction {#intro}
+
+A promising new way to explore spatial population dynamics is through 
+the use genetic data in combination with agent-based models. These 
+models mimic the behaviour and interactions of multiple individuals
+within virtual populations and can be tailored to very specific 
+scenarios of population and environmental change. They are therefore, 
+potentially more realistic than conventional non-spatial techniques, 
+and as a result, more useful in predicting changes in natural 
+populations. While agent-based models offer the prospect of mimicking 
+complex behaviour, they are hard to validate because they need 
+information about processes acting on the individuals rather than
+averages of population level characteristics. This individual based
+information is often hard or even impossible to measure directly in 
+nature by traditional methods of capture and release or survey 
+because they require estimates of mating systems, the variance in 
+reproductive success among individuals, or the rate at which 
+individuals disperse from their place of birth to the place where they
+reproduce. 
+
+Molecular genetic data, combined with spatial information 
+that relate directly to the occurrence of an individual at a
+particular place in space and time, offer a revolutionary approach to
+this problem. In brief, molecular genetic data such as the SNP 
+(single nucleotide polymorphism) DNA markers provide a direct measure 
+of relatedness between individuals. When those data are combined with 
+the specific geographic location at which the individuals in question 
+were captured and samples taken, they provide not only a measure of 
+the degree to which those individuals are genetically related to each
+other (i.e. parents, siblings etc) but also how geographically 
+separated they are. Integration of this information into a Geographic 
+Information System (GIS) enables the spatial, temporal and genetic 
+information to be placed in a landscape context. For instance, if siblings are
+found to be separated by a distance of 20 km within a particular set 
+of habitat types and across a defined number of potential barriers, 
+then that tells us much about how they have traversed the landscape 
+from their place of birth to get to their respective locations. 
+The combination of genetic and spatial data types provides a real and 
+dynamic element to what might otherwise be a single pair of static 
+observations. 
+
+Agent-based models mimic the 
+spatial dynamics and genetic relatedness of individuals in a target 
+population under specific assumptions around parameters of interest 
+such as landscape resistance parameters and demographics. However,
+a paarmeterisation of resistant surfaces that accurately 
+reflect the impediments to functional connectivity is a 
+difficult problem in the field of landscape genetics.
+
+The parametarisation is often subjective, relying on expert
+opinion. New methods that facilitate an objective parameterisation of
+resistance surfaces have been developed [@peterman2014resistancega].
+
+In this work, we explore the use of Approximate Bayesian 
+computation (ABC) [@csillery2010approximate] 
+to estimate model parameters such as 
+landscape resistance that 
+are hard to measure directly. We simulate spatial 
+population dynamics under various landscape scenarios and use ABC to 
+estimate the underlying resistance (and demographic) parameters. 
+The ABC methods are sometimes refered to as ``likelihood-free''  
+methods as instead of computing the likelihood of the 
+observed data, these methods rely on simulating 
+data using a range of parameters
+and comparing simulated data to 
+observed data.  The simulated data sets that are most similar (in a
+statistically rigorous sense) to the 
+observed data are considered to incorporate the most parsimonious 
+parameter values with the greatest power to explain the observed
+pattern. In any realistic problem, the ABC approach compare
+statistics summarising the data rather than the data themselves.
+That is, a number of informative summary statistics, such as F 
+statistics and relatedness indices are calculated from 
+simulated data and compared with the summary statistics of the 
+observed data. Choosing an optimal set of summary statistics is 
+a hard problem. 
+Here we compare and comment on the various summary statistics
+commonly used for genomic data.
+
+
+
